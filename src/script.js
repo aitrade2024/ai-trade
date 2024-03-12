@@ -1,21 +1,6 @@
 import startApp from './app';
 import { initEngine } from './render/init';
 
-function updateImageSource() {
-  const imageElement = document.getElementById('responsiveImage');
-  const screenWidth = window.innerWidth;
-
-  const desktopBreakpoint = 1024;
-
-  if (screenWidth >= desktopBreakpoint) {
-    imageElement.src = './src/assets/img/Mockups.png';
-  } else {
-    imageElement.src = './src/assets/img/MobileMockups.png';
-  }
-};
-
-updateImageSource();
-
 const setsArray = [
   [
     { dirección: 'ICP / USD', resultado: 'short', activo: 35.71 },

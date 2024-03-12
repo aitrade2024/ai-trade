@@ -4,12 +4,12 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./src/assets/css/style.css">
+    <link rel="stylesheet" href="src/assets/css/style.css">
     <title>IberiaInteligencia</title>
   </head>
   <body>
     <div class="gradient__background-wrapper">
-      <img src="./src/assets/img/Gradient.png" alt="Gradient" class="gradient__background"/>
+      <img src="./src/assets/img/Gradient.jpg" alt="Gradient" class="gradient__background"/>
     </div>
     <div class="burger-menu">
       <button class="burger-menu__btn_cross" onclick="toggleMenu()">
@@ -81,9 +81,7 @@
             </a>
           </div>
         </div>
-        <div class="sphere-section__background-wrapper">
-          <img src="./src/assets/img/Sphere.svg" alt="Sphere" class="sphere-section__background" />
-        </div>
+        <div id="canvasContainer" class="canvasContainer"></div>
       </section>
       <div class="content__slider">
         <div class="slider__track">
@@ -285,6 +283,7 @@
         </div>
       </div>
     </footer>
-    <script src="./src/script.js"></script>
+    <script src="./src/toggleMenu.js"></script>
+    <script type="module" src="./src/script.js"></script>
   </body>
 </html>

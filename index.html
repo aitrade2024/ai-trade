@@ -4,10 +4,287 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + TS</title>
+    <link rel="stylesheet" href="./src/assets/css/style.css">
+    <title>IberiaInteligencia</title>
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
+    <div class="gradient__background-wrapper">
+      <img src="./src/assets/img/Gradient.png" alt="Gradient" class="gradient__background"/>
+    </div>
+    <div class="burger-menu">
+      <button class="burger-menu__btn_cross" onclick="toggleMenu()">
+        <img src="./src//assets/img/Cross.svg" alt="Cross icon" />
+      </button>
+      <nav class="burger-menu__nav">
+        <ul class="burger-menu__nav_list">
+          <li class="burger-menu__nav_item" onclick="toggleMenu()">
+            <a href="#features-section">Seguridad</a>
+          </li>
+          <li class="burger-menu__nav_item" onclick="toggleMenu()">
+            <a href="#earnings-section">Comodidad</a>
+          </li>
+          <li class="burger-menu__nav_item" onclick="toggleMenu()">
+            <a href="#technologies-section">Tecnología</a>
+          </li>
+          <li class="burger-menu__nav_item" onclick="toggleMenu()">
+            <a href="#operations-section">Operaciones</a>
+          </li>
+        </ul>
+        <a href="#form-section" onclick="toggleMenu()">
+          <button class="button__purple">
+            Contáctenos
+          </button>
+        </a>
+      </nav>
+    </div>
+    <header class="header template">
+      <div class="header__logo">IberiaInteligencia</div>
+      <nav class="header__nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="#features-section">Seguridad</a>
+          </li>
+          <li class="nav__item">
+            <a href="#earnings-section">Comodidad</a>
+          </li>
+          <li class="nav__item">
+            <a href="#technologies-section">Tecnología</a>
+          </li>
+          <li class="nav__item">
+            <a href="#operations-section">Operaciones</a>
+          </li>
+          <a href="#form-section">
+            <button class="button__purple">
+              Contáctenos
+            </button>
+          </a>
+        </ul>
+      </nav>
+      <button class="header__burger-btn" onclick="toggleMenu()">
+        <img src="./src/assets/img/Burger.svg" alt="Burger menu" />
+      </button>
+    </header>
+    <main>
+      <section class="sphere-section template">
+        <div class="sphere-section__wrapper">
+          <div class="sphere-section__content">
+            <h1 class="content__title">
+              Convertimos datos en dólares mediante el comercio con inteligencia artificial
+            </h1>
+            <p class="content__text">
+              Desarrolle su cartera utilizando tecnología de punta en aprendizaje automático e inteligencia artificial.
+            </p>
+            <a href="#form-section">
+              <button class="button__purple">
+                Comenzar el aprendizaje
+              </button>
+            </a>
+          </div>
+        </div>
+        <div class="sphere-section__background-wrapper">
+          <img src="./src/assets/img/Sphere.svg" alt="Sphere" class="sphere-section__background" />
+        </div>
+      </section>
+      <div class="content__slider">
+        <div class="slider__track">
+          <img src="./src/assets/img/Forbes.svg" alt="Forbes icon" class="slider__track_logo" />
+          <img src="./src/assets/img/Cointelegraph.svg" alt="Cointelegraph icon" class="slider__track_logo" />
+          <img src="./src/assets/img/Cryptonews.svg" alt="Cryptonews icon" class="slider__track_logo" />
+          <img src="./src/assets/img/Yahoo.svg" alt="Yahoo icon" class="slider__track_logo" />
+          <img src="./src/assets/img/CoinMarketCap.svg" alt="CoinMarketCap icon" class="slider__track_logo" />
+          <img src="./src/assets/img/Ciphertrace.svg" alt="Ciphertrace icon" class="slider__track_logo" />
+        </div>
+        <div class="slider__track">
+          <img src="./src/assets/img/Forbes.svg" alt="Forbes icon" class="slider__track_logo" />
+          <img src="./src/assets/img/Cointelegraph.svg" alt="Cointelegraph icon" class="slider__track_logo" />
+          <img src="./src/assets/img/Cryptonews.svg" alt="Cryptonews icon" class="slider__track_logo" />
+          <img src="./src/assets/img/Yahoo.svg" alt="Yahoo icon" class="slider__track_logo" />
+          <img src="./src/assets/img/CoinMarketCap.svg" alt="CoinMarketCap icon" class="slider__track_logo" />
+          <img src="./src/assets/img/Ciphertrace.svg" alt="Ciphertrace icon" class="slider__track_logo" />
+        </div>
+      </div>
+      <section id="features-section" class="features-section template">
+        <h2 class="features-section__title">Su seguridad es nuestra principal prioridad en IberiaInteligencia</h2>
+        <div class="features-section__cards">
+          <div class="features-section__card">
+            <h3 class="card__title">SERVICIOS FINANCIEROS LICENCIADOS</h3>
+            <p class="card__text">
+              Contamos con una licencia emitida en la UE para ofrecer servicios financieros, incluido el comercio de criptomonedas, utilizando potente tecnología de inteligencia artificial, en asociación con plataformas de seguridad de activos de primer nivel y entidades financieras de primera clase.
+            </p>
+          </div>
+          <div class="features-section__card">
+            <h3 class="card__title">DIVERSIFICACIÓN Y ANÁLISIS</h3>
+            <p class="card__text">
+              Diversificamos carteras y actualizamos los protocolos de gestión de riesgos de nuestro algoritmo de inteligencia artificial para minimizar el riesgo. ALGOSONE utiliza estrategias de cobertura automatizadas, stop-loss y límites, además de analizar datos técnicos para identificar patrones de riesgo.
+            </p>
+          </div>
+          <div class="features-section__card">
+            <h3 class="card__title">PREVENCIÓN DE LIQUIDACIÓN</h3>
+            <p class="card__text">
+              Un límite del 5%-10% del saldo total en una sola operación previene la liquidación, mientras que el fondo de reserva proporciona cobertura de capital al cliente y ofrece compensación parcial por posiciones perdedoras.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section id="earnings-section" class="earnings-section">
+        <div class="earnings-section__background-wrapper">
+          <img src="./src/assets/img/EarningsSectionBg.png" alt="Earlings background" class="earnings-section__background" />
+        </div>
+        <div class="template">
+          <div class="earnings-section__wrapper">
+            <div class="earnings-section__content">
+              <h3 class="earnings-section__title">Siéntese, relájese y comience a ganar</h3>
+              <p>Aumenta tus ahorros con el uso de un sistema de comercio moderno basado en inteligencia artificial.</p>
+            </div>
+            <img id="responsiveImage" class="earnings-section__image" src="" alt="Mockups image" />
+          </div>
+        </div>
+      </section>
+      <section id="technologies-section" class="technologies-section template">
+        <h3 class="technologies-section__title">
+          Tecnologías innovadoras IberiaInteligencia
+        </h3>
+        <div class="technologies-section__wrapper">
+          <div class="technologies-section__content">
+            <div class="technologies-section__cards">
+              <div class="technologies-section__card">
+                <h4 class="technology__title">Potente procesamiento</h4>
+                <p class="card__text">IberiaInteligencia analiza noticias macroeconómicas, así como micro noticias específicas de empresas, monedas y productos, accediendo a información global de fuentes tradicionales y alternativas de datos.</p>
+              </div>
+              <div class="technologies-section__card">
+                <h4 class="technology__title">Aprendizaje automático</h4>
+                <p class="card__text">Utilizando redes neuronales profundas, IberiaInteligencia puede hacer pronósticos comerciales cada vez más precisos, aprendiendo de cada nuevo conjunto de datos y cada transacción para predecir mejor la actividad del mercado.</p>
+              </div>
+              <div class="technologies-section__card">
+                <h4 class="technology__title">Análisis predictivo</h4>
+                <p class="card__text">IberiaInteligencia evalúa el historial de precios, noticias del mercado y análisis de una variedad de fuentes en diferentes idiomas y utiliza diversos indicadores técnicos para tomar decisiones altamente informadas.</p>
+              </div>
+              <div class="technologies-section__card">
+                <h4 class="technology__title">Eficiencia probada</h4>
+                <p class="card__text">Algoritmos complejos basados en inteligencia artificial permiten a IberiaInteligencia mejorar constantemente sus modelos matemáticos para la gestión de riesgos, la predicción de tendencias del mercado y la generación efectiva de ganancias.</p>
+              </div>
+            </div>
+            <button class="button__purple">Comenzar</button>
+          </div>
+        <div class="technologies-section__image-wrapper">
+          <img class="technologies-section__image" src="./src/assets/img/Dashboard.png" alt="Dashboard image" />
+        </div>
+        </div>
+      </section>
+      <section class="steps-section">
+        <div class="steps-section__background"></div>
+        <div class="template">
+          <h3 class="steps-section__title">3 Pasos Sencillos para Empezar a Operar</h3>
+          <p class="steps-section__subtitle">
+            La plataforma de trading CFD Invest Forex permite a cada trader novato empezar a cosechar los frutos de la industria del trading. Con un depósito mínimo de tan solo 10 dólares, brindamos a cada persona la oportunidad de alcanzar sus metas financieras.
+          </p>
+          <div class="steps-section__cards">
+            <div class="steps-section__card">
+              <div class="card__wrapper">
+                <div class="card__number">
+                  1
+                </div>
+                <div class="card__arrow-wrapper">
+                  <img src="./src/assets/img/Arrow.svg" alt="Arrow icon" class="card__arrow" />
+                </div>
+              </div>
+              <div class="card__content">
+                <h4 class="card__title_large">Iniciar sesión</h4>
+                <p>
+                  Regístrate y confirma tu cuenta en IberiaInteligencia en menos de 5 minutos.
+                </p>
+                <img src="./src/assets/img/RotateArrow.svg" alt="RotateArrow icon" class="card__arrow_rotate" />
+              </div>
+            </div>
+            <div class="steps-section__card">
+              <div class="card__wrapper">
+                <div class="card__number">
+                  2
+                </div>
+                <div class="card__arrow-wrapper">
+                  <img src="./src/assets/img/Arrow.svg" alt="Arrow icon" class="card__arrow" />
+                </div>
+              </div>
+              <div class="card__content">
+                <h4 class="card__title_large">Depósito</h4>
+                <p>
+                  Deposita fondos en tu cuenta de IberiaInteligencia, utilizando uno de los múltiples métodos disponibles.
+                </p>
+                <img src="./src/assets/img/RotateArrow.svg" alt="RotateArrow icon" class="card__arrow_rotate" />
+              </div>
+            </div>
+            <div class="steps-section__card">
+              <div class="card__wrapper">
+                <div class="card__number">
+                  3
+                </div>
+              </div>
+              <div class="card__content">
+                <h4 class="card__title_large">Trading</h4>
+                <p>
+                  Opera con Bitcoin, S&P 500, XAU/ USD, EUR/ USD y más de 100 activos.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="operations-section" class="operations-section template">
+        <h3 class="operations-section__title">Últimas operaciones.</h3>
+        <div class="operations-section__table-wrapper">
+          <div class="operations-section__table" id="tableContainer"></div>
+        </div>
+      </section>
+      <section id="form-section" class="form-section template">
+        <h3 class="form-section__title">Empieza a ganar hoy mismo con nosotros.</h3>
+        <form class="form-section__form">
+          <div class="form__inputs">
+            <div class="form__input">
+              <label htmlFor="name" class="form__label">
+                <span>Nombre</span>
+              </label>
+              <input id="name" type="text" name="name" placeholder="Su nombre" class="form__input_input" />
+            </div>
+            <div class="form__input">
+              <label htmlFor="phone" class="form__label">
+                <span>Número de teléfono</span>
+              </label>
+              <input id="phone" type="tel" name="phone" placeholder="+34 00-000-000" class="form__input_input" />
+            </div>
+          </div>
+          <button class="button__purple_small">Contáctenos</button>
+        </form>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__background"></div>
+      <div class="template">
+        <div class="footer__content">
+          <div class="header__logo">IberiaInteligencia</div>
+          <nav class="footer__nav">
+            <ul class="nav__list footer__nav_list">
+              <li class="nav__item">
+                <a href="#features-section">Seguridad</a>
+              </li>
+              <li class="nav__item">
+                <a href="#earnings-section">Comodidad</a>
+              </li>
+              <li class="nav__item">
+                <a href="#technologies-section">Tecnología</a>
+              </li>
+              <li class="nav__item">
+                <a href="#operations-section">Operaciones</a>
+              </li>
+              <a href="#form-section">
+                <button class="button__white">
+                  Contáctenos
+                </button>
+              </a>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </footer>
+    <script src="./src/script.js"></script>
   </body>
 </html>

@@ -1,15 +1,5 @@
-function toggleMenu() {
-  const menuList = document.querySelector('.burger-menu');
-  const html = document.querySelector('html');
-
-  if (menuList.classList.contains('menu-open')) {
-    menuList.classList.remove('menu-open');
-    html.style.overflowY = 'auto';
-  } else {
-    menuList.classList.add('menu-open');
-    html.style.overflowY = 'hidden';
-  }
-}
+import startApp from './app';
+import { initEngine } from './render/init';
 
 function updateImageSource() {
   const imageElement = document.getElementById('responsiveImage');
@@ -22,7 +12,7 @@ function updateImageSource() {
   } else {
     imageElement.src = './src/assets/img/MobileMockups.png';
   }
-}
+};
 
 updateImageSource();
 
@@ -65,28 +55,34 @@ const setsArray = [
 ];
 
 const tableContainer = document.getElementById('tableContainer');
-  let currentIndex = 0;
+let currentIndex = 0;
 
-  function renderTable() {
-    const currentSet = setsArray[currentIndex];
+function renderTable() {
+  const currentSet = setsArray[currentIndex];
 
-    tableContainer.innerHTML = '';
+  tableContainer.innerHTML = '';
 
-    const headerRow = document.createElement('div');
-    headerRow.className = 'table__row';
-    headerRow.innerHTML = '<p class="table__cell">Activo</p><p class="table__cell">Dirección</p><p class="table__cell">Resultado</p>';
-    tableContainer.appendChild(headerRow);
+  const headerRow = document.createElement('div');
+  headerRow.className = 'table__row';
+  headerRow.innerHTML = '<p class="table__cell">Activo</p><p class="table__cell">Dirección</p><p class="table__cell">Resultado</p>';
+  tableContainer.appendChild(headerRow);
 
-    currentSet.forEach(item => {
-      const row = document.createElement('div');
-      row.className = 'table__row';
-      row.innerHTML = `<p class="table__cell">${item.dirección}</p><p class="table__cell">${item.resultado}</p><p class="table__cell ${item.activo < 0 ? 'table__cell_red' : 'table__cell_green'}">${item.activo}</p>`;
-      tableContainer.appendChild(row);
-    });
+  currentSet.forEach(item => {
+    const row = document.createElement('div');
+    row.className = 'table__row';
+    row.innerHTML = `<p class="table__cell">${item.dirección}</p><p class="table__cell">${item.resultado}</p><p class="table__cell ${item.activo < 0 ? 'table__cell_red' : 'table__cell_green'}">${item.activo}</p>`;
+    tableContainer.appendChild(row);
+  });
 
-    currentIndex = (currentIndex + 1) % setsArray.length;
-  }
+  currentIndex = (currentIndex + 1) % setsArray.length;
+}
 
-  renderTable();
+renderTable();
 
-  setInterval(renderTable, 2000);
+setInterval(renderTable, 2000);
+
+(async () => {
+  const containerElement = document.getElementById('canvasContainer');
+  await initEngine(containerElement)
+  startApp()
+})();

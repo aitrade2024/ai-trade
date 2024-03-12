@@ -599,15 +599,6 @@ a {
 }
 
 @media screen and (max-width: 1200px) {
-  @keyframes scroll {
-    from {
-      transform: translateX(0);
-    }
-    to {
-      transform: translateX(calc(-100% - 20px));
-    }
-  }
-
   .gradient__background-wrapper {
     top: -100px;
   }
@@ -638,10 +629,6 @@ a {
   .canvasContainer {
     bottom: 0;
     right: -200px;
-  }
-
-  .slider__track {
-    height: 48px;
   }
 
   .features-section {
@@ -749,20 +736,12 @@ a {
   }
 
   .sphere-section__wrapper {
-    height: calc(100vh - 100px);
+    height: calc(100vh - 110px);
   }
 
   .sphere-section__content {
     justify-content: flex-start;
     margin-top: 68px;
-  }
-
-  .content__slider {
-    gap: 20px;
-  }
-
-  .slider__track {
-    gap: 20px;
   }
 
   .features-section {
@@ -948,7 +927,7 @@ a {
   }
 
   .canvasContainer {
-    bottom: 0;
+    bottom: 50px;
     right: -200px;
     width: 400px;
     height: 400px;

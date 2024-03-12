@@ -113,7 +113,7 @@
           <div class="features-section__card">
             <h3 class="card__title">DIVERSIFICACIÓN Y ANÁLISIS</h3>
             <p class="card__text">
-              Diversificamos carteras y actualizamos los protocolos de gestión de riesgos de nuestro algoritmo de inteligencia artificial para minimizar el riesgo. ALGOSONE utiliza estrategias de cobertura automatizadas, stop-loss y límites, además de analizar datos técnicos para identificar patrones de riesgo.
+              Diversificamos carteras y actualizamos los protocolos de gestión de riesgos de nuestro algoritmo de inteligencia artificial para minimizar el riesgo. IberiaInteligencia utiliza estrategias de cobertura automatizadas, stop-loss y límites, además de analizar datos técnicos para identificar patrones de riesgo.
             </p>
           </div>
           <div class="features-section__card">
@@ -162,7 +162,9 @@
                 <p class="card__text">Algoritmos complejos basados en inteligencia artificial permiten a IberiaInteligencia mejorar constantemente sus modelos matemáticos para la gestión de riesgos, la predicción de tendencias del mercado y la generación efectiva de ganancias.</p>
               </div>
             </div>
-            <button class="button__purple">Comenzar</button>
+            <a href="#form-section">
+              <button class="button__purple">Comenzar</button>
+            </a>
           </div>
         <div class="technologies-section__image-wrapper">
           <img class="technologies-section__image" src="./src/assets/img/Dashboard.png" alt="Dashboard image" />
@@ -174,7 +176,7 @@
         <div class="template">
           <h3 class="steps-section__title">3 Pasos Sencillos para Empezar a Operar</h3>
           <p class="steps-section__subtitle">
-            La plataforma de trading CFD Invest Forex permite a cada trader novato empezar a cosechar los frutos de la industria del trading. Con un depósito mínimo de tan solo 10 dólares, brindamos a cada persona la oportunidad de alcanzar sus metas financieras.
+            La plataforma de trading IberiaInteligencia permite a cada trader novato empezar a cosechar los frutos de la industria del trading. Con un depósito mínimo de tan solo 10 dólares, brindamos a cada persona la oportunidad de alcanzar sus metas financieras.
           </p>
           <div class="steps-section__cards">
             <div class="steps-section__card">
@@ -283,7 +285,20 @@
         </div>
       </div>
     </footer>
-    <script src="./src/toggleMenu.js"></script>
+    <script>
+      function toggleMenu() {
+        const menuList = document.querySelector('.burger-menu');
+        const html = document.querySelector('html');
+
+        if (menuList.classList.contains('menu-open')) {
+          menuList.classList.remove('menu-open');
+          html.style.overflowY = 'auto';
+        } else {
+          menuList.classList.add('menu-open');
+          html.style.overflowY = 'hidden';
+        }
+      };
+    </script>
     <script type="module" src="./src/script.js"></script>
   </body>
 </html>

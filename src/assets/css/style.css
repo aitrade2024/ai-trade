@@ -644,11 +644,6 @@ a {
     height: 48px;
   }
 
-  .slider__track_logo {
-    width: 15%;
-    height: 60%;
-  }
-
   .features-section {
     margin-top: 100px;
   }
@@ -751,6 +746,10 @@ a {
   .button__purple {
     max-width: 358px;
     width: 100%;
+  }
+
+  .sphere-section__wrapper {
+    height: calc(100vh - 100px);
   }
 
   .sphere-section__content {

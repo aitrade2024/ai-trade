@@ -420,6 +420,15 @@ a {
   gap: 63.8px;
 }
 
+.scroll {
+  opacity: 0;
+  transition: opacity 3000ms;
+}
+
+.scroll.scrolled {
+  opacity: 1;
+}
+
 .steps-section__card {
   width: 33.3%;
   display: flex;

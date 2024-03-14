@@ -47,7 +47,8 @@ const startApp = () => {
       );
 
       shader.uniforms.color = { value: new THREE.Vector3(1.0, 0.0, 1.0) };
-    }
+    },
+    roughness: 0
   });
   
   const sphere = new THREE.Mesh(geometry, material);

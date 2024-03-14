@@ -9,23 +9,11 @@ import fragmentShaderPars from './shaders/fragment_pars.glsl.js';
 const startApp = () => {
   const scene = useScene();
 
-  const gradientCanvas = document.createElement('canvas');
-  gradientCanvas.width = 256;
-  gradientCanvas.height = 1;
-  const gradientContext = gradientCanvas.getContext('2d');
-  const gradient = gradientContext.createLinearGradient(0, 0, 256, 0);
-  gradient.addColorStop(0, '#FF0000'); // Red
-  gradient.addColorStop(0.5, '#00FF00'); // Green
-  gradient.addColorStop(1, '#0000FF'); // Blue
-  gradientContext.fillStyle = gradient;
-  gradientContext.fillRect(0, 0, 256, 1);
-
-  const gradientTexture = new THREE.CanvasTexture(gradientCanvas);
-
-  const dirLight = new THREE.DirectionalLight(gradientTexture, 0.6);
+  const purpleColor = new THREE.Color(0xEDDDED);
+  const dirLight = new THREE.DirectionalLight(purpleColor, 0.7);
   dirLight.position.set(1, 1, 1);
 
-  const ambientLight = new THREE.AmbientLight('#4255ff', 0.5);
+  const ambientLight = new THREE.AmbientLight('#4255ff', 0.8);
   scene.add(dirLight, ambientLight);
 
   const geometry = new THREE.IcosahedronGeometry(1, 200);
@@ -57,6 +45,8 @@ const startApp = () => {
         mainFragmentString,
         mainFragmentString + fragmentShaderMain
       );
+
+      shader.uniforms.color = { value: new THREE.Vector3(1.0, 0.0, 1.0) };
     }
   });
   

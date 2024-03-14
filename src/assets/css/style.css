@@ -200,8 +200,8 @@ a {
 }
 
 .canvasContainer {
-  bottom: 0;
-  right: 0;
+  bottom: 10%;
+  right: -30px;
   width: 560px;
   height: 560px;
   position: absolute;
@@ -636,7 +636,7 @@ a {
   }
 
   .canvasContainer {
-    bottom: 0;
+    bottom: 100px;
     right: -200px;
   }
 
@@ -936,7 +936,7 @@ a {
   }
 
   .canvasContainer {
-    bottom: 50px;
+    bottom: 10%;
     right: -200px;
     width: 400px;
     height: 400px;

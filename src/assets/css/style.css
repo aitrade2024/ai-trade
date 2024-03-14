@@ -200,7 +200,7 @@ a {
 }
 
 .canvasContainer {
-  bottom: 10%;
+  bottom: calc(50% - 280px);
   right: -30px;
   width: 560px;
   height: 560px;

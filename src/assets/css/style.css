@@ -564,7 +564,8 @@ a {
 
 .form__inputs {
   display: flex;
-  gap: 32px;
+  flex-direction: column;
+  gap: 24px;
   width: 100%;
 }
 
@@ -916,6 +917,10 @@ a {
   .button__white {
     width: 100%;
   }
+
+  .form-section__title {
+    margin-bottom: 32px;
+  }
 }
 
 @media screen and (max-width: 764px) {
@@ -955,14 +960,5 @@ a {
   .table__row {
     padding: 14px 25px;
     font-size: 14px;
-  }
-
-  .form-section__title {
-    margin-bottom: 32px;
-  }
-
-  .form__inputs {
-    gap: 24px;
-    flex-direction: column;
   }
 }

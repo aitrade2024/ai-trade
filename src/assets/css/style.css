@@ -210,8 +210,9 @@ a {
 
 .sphere-section__wrapper {
   display: flex;
-  flex-direction: column;
   height: calc(100vh - 148px);
+  gap: 50px;
+  align-items: center;
 }
 
 .sphere-section__content {
@@ -219,7 +220,15 @@ a {
   flex-direction: column;
   justify-content: center;
   max-width: 670px;
-  height: 100%;
+}
+
+.sphere-section__video-wrapper {
+  width: 100%;
+}
+
+.sphere-section__video {
+  width: 100%;
+  border-radius: 10px;
 }
 
 .content__title {
@@ -724,6 +733,16 @@ a {
     padding: 20px 16px 0 16px;
   }
 
+  .sphere-section__wrapper {
+    gap: 30px;
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+
+  .sphere-section__video-wrapper {
+    max-width: 670px;
+  }
+
   h3 {
     font-size: 24px;
   }
@@ -751,7 +770,6 @@ a {
 
   .sphere-section__content {
     justify-content: flex-start;
-    margin-top: 68px;
   }
 
   .features-section {

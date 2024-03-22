@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>IberiaInteligencia</title>
-    <script type="module" crossorigin src="https://aitrade2024.github.io/ai-trade/assets/index-8Y4GWvre.js"></script>
+    <script type="module" crossorigin src="https://aitrade2024.github.io/ai-trade/assets/index-D3y5FWK8.js"></script>
     <link rel="stylesheet" crossorigin href="https://aitrade2024.github.io/ai-trade/assets/index-1ys6zqhX.css">
   </head>
   <body>
@@ -307,25 +307,5 @@
         }
       };
     </script>
-    <script src="node_modules/intl-tel-input/build/js/intlTelInput.min.js"></script>
-    <script>
-      var input = document.querySelector("#phone");
-      var iti = window.intlTelInput(input, {
-        separateDialCode: true,
-        initialCountry: "auto",
-        geoIpLookup: function(callback) {
-          fetch("https://ipinfo.io/json?token=5ea546ed297066")
-            .then(function(response) {
-              if (!response.ok) return callback();
-              return response.json();
-            })
-            .then(function(data) {
-              var countryCode = data.country;
-              callback(countryCode);
-            })
-            .catch(callback);
-        }
-      });
-    </script>
   </body>
 </html>

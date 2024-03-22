@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="src/assets/css/style.css">
+    <link rel="stylesheet" href="node_modules/intl-tel-input/build/css/intlTelInput.css">
     <title>IberiaInteligencia</title>
   </head>
   <body>
@@ -256,7 +257,7 @@
               <label htmlFor="phone" class="form__label">
                 <span>Número de teléfono</span>
               </label>
-              <input id="phone" type="tel" name="phone" placeholder="+34 00-000-000" class="form__input_input" />
+              <input id="phone" type="tel" name="phone" placeholder="+34 00-000-000" class="form__input_input form__phone-input" />
             </div>
           </div>
           <button class="button__purple_small">Contáctenos</button>
@@ -307,5 +308,25 @@
       };
     </script>
     <script type="module" src="./src/script.js"></script>
+    <script src="node_modules/intl-tel-input/build/js/intlTelInput.min.js"></script>
+    <script>
+      var input = document.querySelector("#phone");
+      var iti = window.intlTelInput(input, {
+        separateDialCode: true,
+        initialCountry: "auto",
+        geoIpLookup: function(callback) {
+          fetch("https://ipinfo.io/json?token=5ea546ed297066")
+            .then(function(response) {
+              if (!response.ok) return callback();
+              return response.json();
+            })
+            .then(function(data) {
+              var countryCode = data.country;
+              callback(countryCode);
+            })
+            .catch(callback);
+        }
+      });
+    </script>
   </body>
 </html>

@@ -308,25 +308,5 @@
       };
     </script>
     <script type="module" src="./src/script.js"></script>
-    <script src="node_modules/intl-tel-input/build/js/intlTelInput.min.js"></script>
-    <script>
-      var input = document.querySelector("#phone");
-      var iti = window.intlTelInput(input, {
-        separateDialCode: true,
-        initialCountry: "auto",
-        geoIpLookup: function(callback) {
-          fetch("https://ipinfo.io/json?token=5ea546ed297066")
-            .then(function(response) {
-              if (!response.ok) return callback();
-              return response.json();
-            })
-            .then(function(data) {
-              var countryCode = data.country;
-              callback(countryCode);
-            })
-            .catch(callback);
-        }
-      });
-    </script>
   </body>
 </html>

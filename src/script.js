@@ -1,5 +1,6 @@
 import startApp from './app';
 import { initEngine } from './render/init';
+import intlTelInput from 'intl-tel-input';
 
 const setsArray = [
   [
@@ -98,3 +99,23 @@ const handleScrollAnimation = () => {
 window.addEventListener('scroll', () => {
   handleScrollAnimation();
 })
+
+document.addEventListener('DOMContentLoaded', function() {
+  var input = document.querySelector("#phone");
+  intlTelInput(input, {
+    separateDialCode: true,
+    initialCountry: "auto",
+    geoIpLookup: function(callback) {
+      fetch("https://ipinfo.io/json?token=5ea546ed297066")
+        .then(function(response) {
+          if (!response.ok) return callback();
+          return response.json();
+        })
+        .then(function(data) {
+          var countryCode = data.country;
+          callback(countryCode);
+        })
+        .catch(callback);
+    }
+  });
+});
